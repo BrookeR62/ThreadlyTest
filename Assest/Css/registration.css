@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+     background-color: #F5E6D3;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+    font-family: fredoko;
+    font-style: regular;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card {
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 16px;
+    width: 720px;
+    max-width: 95%;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.05),
+        0 15px 35px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+
+.login_logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.login_logo img {
+    width: 120px;
+    height: 120px;       
+    border-radius: 50%;   
+    object-fit: cover;       
+    background: #F4E7D8;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+.full {
+    grid-column: span 2;
+}
+
+
+.inputgroup {
+    display: flex;
+    flex-direction: column;
+     position: relative;
+}
+
+
+
+.inputgroup label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+}
+
+
+.inputgroup input,
+.inputgroup select {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+    background: #fafafa;
+}
+
+
+.inputgroup input:hover,
+.inputgroup select:hover {
+    border-color: #999;
+}
+
+
+.inputgroup input:focus,
+.inputgroup select:focus {
+    border-color: #ff914d;
+    background: #ffffff;
+
+    outline: none;
+
+    box-shadow: 0 0 0 3px rgba(255,145,77,0.15);
+}
+
+
+.registerbuton {
+    margin-top: 25px;
+
+    width: 100%;
+    padding: 14px;
+
+    border-radius: 10px;
+    border: none;
+
+    background: #f2bc7b;
+
+    color: rgb(2, 2, 2);
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(255, 108, 4, 0.25);
+
+    transition: all 0.2s ease;
+}
+
+
+.registerbuton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(255,106,0,0.35);
+}
+
+
+.registerbuton:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: span 1;
+    }
+
+}
+.eyeIcon {
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.eyeIcon img {
+    width: 22px;
+    height: 22px;
+}
+
+.open {
+    display: none;
+}
+
+.show .open {
+    display: block;
+}
+
+.show .close {
+    display: none;
+}
