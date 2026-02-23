@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="nav_spacing">
-        <a href="View/frontend/home.php" class="backbutton">Back</a>
+        <a href="home.php" class="backbutton">Back</a>
         <div class="threadlylogin"><h1>Threadly</h1></div>
     </div>
 

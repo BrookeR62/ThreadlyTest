@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-// protect page
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit();
 }
+
 
 $page_title = "Home - Threadly";
 include("includes/header.php");

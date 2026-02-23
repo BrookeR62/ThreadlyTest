@@ -1,17 +1,10 @@
-function toggle() {
-    const wrap = document.querySelector('.password_wrap');
-    const input = document.getElementById('passinput');
-    
-    
-    wrap.classList.toggle('show');
-    
-   
-    if (input.type === "password") {
-        input.type = "text";
-    } else {
-        input.type = "password";
-    }
-}
+setTimeout(() => {
+    const msg = document.querySelector(".success-message");
+    if (msg) msg.style.display = "none";
+}, 3000);
+
+
+
 
 function toggle(icon) {
     icon.classList.toggle("show");
@@ -71,3 +64,4 @@ function validateAge() {
 
 birthdateInput.addEventListener("change", validateAge);
 ageInput.addEventListener("input", validateAge);
+

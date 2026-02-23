@@ -1,16 +1,13 @@
-<?php if (isset($_GET['error'])): ?>
+<?php if (isset($_GET['success']) && $_GET['success'] == "registered"): ?>
+    <div class="success-message">
+        Registration successful! You can now login.
+    </div>
+<?php endif; ?>
 
-<div style="
-color:white;
-background:#ff4d4d;
-padding:10px;
-margin-bottom:15px;
-border-radius:8px;
-text-align:center;
-">
-Wrong username or password
-</div>
-
+<?php if (isset($_GET['error']) && $_GET['error'] == "wrong"): ?>
+    <div class="error-message">
+        Wrong username or password.
+    </div>
 <?php endif; ?>
 
 <!DOCTYPE html>
@@ -50,7 +47,7 @@ Wrong username or password
         <div class="right">
             <div class="form-wrapper">
                 <h3>Sign In</h3>
-              <form action="Controller/AuthController.php" method="POST">
+             <form action="Controller/AuthController.php" method="POST">
                     <input type="hidden" name="action" value="login">
 
                     <div class="input-group">
@@ -61,19 +58,20 @@ Wrong username or password
                     <div class="input-group">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" name="password" placeholder="Password" required>
+                         <div class="eyeIcon" onclick="toggle(this)">
+                     <img src="Assest/Image/closed-eye.png" class="close" alt="closed">
+                     <img src="Assest/Image/open-eye.png" class="open" alt="open"> </div>
+                     </div>
                     </div>
-
-                    <div class="actions">
+                   <div class="actions">
                         <label class="checkbox-container">
-                            <input type="checkbox"> 
-                            <span class="checkmark"></span>
+                            <input type="checkbox" name="remember">
                             Remember me
                         </label>
-
-                        <a href="#" class="forgot-pass">Forgot Password?</a>
-                    </div>
-
-                   
+                        <a href="forgot_password.php" class="forgot-pass">
+                            Forgot Password?
+                        </a>
+                    </div>                
                     <button type="submit" class="login-btn">Login</button>
 
                 </form>

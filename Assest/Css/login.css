@@ -223,7 +223,7 @@ h2 {
 }
 
 .input-group input {
-    width: 100%;
+    width: 110%;
     padding: 15px 20px 15px 50px;
     border-radius: 12px;
     border: 2px solid transparent;
@@ -248,42 +248,12 @@ h2 {
 .input-group input:focus + i {
     color: var(--burnt-orange);
 }
-
-
-.actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    font-size: 14px;
+.input-group input[type="password"],
+.input-group input[type="text"] {
+    padding-right: 50px;
 }
 
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: var(--text-light);
-}
 
-.checkbox-container input {
-    margin-right: 8px;
-    accent-color: var(--burnt-orange);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
-.forgot-pass {
-    color: var(--burnt-orange);
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.forgot-pass:hover {
-    color: var(--primary-brown);
-    text-decoration: underline;
-}
 
 
 button {
@@ -383,4 +353,99 @@ button {
     }
 }
 
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+}
 
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+} 
+.eyeIcon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.eyeIcon img {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    transition: opacity 0.2s ease;
+}
+
+
+.eyeIcon .open {
+    opacity: 0;
+}
+
+.eyeIcon .close {
+    opacity: 1;
+}
+
+
+.eyeIcon.show .open {
+    opacity: 1;
+}
+
+.eyeIcon.show .close {
+    opacity: 0;
+}
+
+.eyeIcon:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #7a6a58;
+}
+
+
+.checkbox-container input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+
+.forgot-pass {
+    font-size: 13px;
+    color: #c57b57;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}
