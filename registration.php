@@ -1,11 +1,11 @@
 <?php if (isset($_GET['error']) && $_GET['error'] == "password"): ?>
-<div class="error-message">
+<div class="error-password">
 Passwords do not match.
 </div>
 <?php endif; ?>
 
 <?php if (isset($_GET['error']) && $_GET['error'] == "failed"): ?>
-<div class="error-message">
+<div class="error-failed">
 Registration failed. Try again.
 </div>
 <?php endif; ?>
@@ -19,7 +19,7 @@ Registration failed. Try again.
 <link rel="stylesheet" href="Assest/Css/registration.css">
 </head>
 <body class="registerui">
- <button class="back" onclick="window.location.href='View/frontend/index.php'">Back</button>
+ <button class="back" onclick="window.location.href='index.php'">Back</button>
 <div class="main-container">
 
     <div class="card">

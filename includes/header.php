@@ -16,6 +16,8 @@ if (!isset($page_title)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <link rel="stylesheet" href="Assest/Css/home.css">
     <title><?php echo $page_title; ?></title>
 </head>
@@ -28,5 +30,28 @@ if (!isset($page_title)) {
             <a href="community.php" class="n">Community</a>
             <a href="contact.php" class="n">Contact</a>         
         </div>
-        <a  href="predict.php" class="button_pridect">Predict Price</a>  
+     <a href="predict.php" class="button_pridect">Predict Price</a>
+       <div class="nav-icons">   
+            <a href="messages.php" title="Messages">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="notifications.php" title="Notifications">
+                <i class="fa-solid fa-bell"></i>
+            </a>
+            <div class="profile-menu">
+                <button class="profile-btn" type="button" id="profileToggle">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="account.php">Account</a>
+                    <a href="settings.php">Settings</a>
+                  <form action="Controller/AuthController.php" method="POST">
+                    <input type="hidden" name="action" value="logout">
+                    <button type="submit" class="logout">
+                        Logout
+                    </button>
+                </form>
+                </div>
+            </div>
+        </div>
     </nav>

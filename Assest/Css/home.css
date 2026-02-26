@@ -450,17 +450,72 @@ body {
 
 } 
 
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 
 
+.nav-icons a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+}
 
 
+.profile-menu {
+    position: relative;
+}
 
 
+.profile-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #e5e5e5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-btn i {
+    font-size: 16px;
+    color: #333;
+}
 
 
+.profile-dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 160px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 1000;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 12px 14px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-dropdown a:hover {
+    background: #f2f2f2;
+}
 
 
-
+.profile-dropdown .logout {
+    color: #d9534f;
+    font-weight: 500;
+}
 
 
 

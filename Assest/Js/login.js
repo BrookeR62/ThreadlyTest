@@ -1,8 +1,3 @@
-setTimeout(() => {
-    const msg = document.querySelector(".success-message");
-    if (msg) msg.style.display = "none";
-}, 3000);
-
 
 
 

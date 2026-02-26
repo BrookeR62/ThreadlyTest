@@ -37,9 +37,9 @@
             <div class="social-login">
                 <span>Contact us with</span>
                 <div class="social-icons">
-                    <a href=""><i class="fa-brands fa-google"></i></a>
-                    <a href=""><i class="fa-brands fa-apple"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.google.com"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.instagram.com/challenge/?next=https%3A%2F%2Fwww.instagram.com%2F1768_christian%2F%3F__coig_challenged%3D1#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/christian.soria.188"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
             </div>
         </div>
@@ -83,6 +83,12 @@
             </div>
         </div>
     </div>
+    <script>
+    setTimeout(() => {
+    const msg = document.querySelector(".success-message");
+    if (msg) msg.style.display = "none";
+    }, 100);
+</script>
 <script src="Assest/Js/login.js"></script>
 </body>
 </html>

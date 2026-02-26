@@ -92,3 +92,18 @@ document.getElementById("price").innerText = item.price;
 document.getElementById("shipping").innerText = item.shipping;
 
 }
+
+
+    const toggle = document.getElementById('profileToggle');
+    const dropdown = document.getElementById('profileDropdown');
+
+    toggle.addEventListener('click', () => {
+        dropdown.style.display =
+            dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.style.display = 'none';
+        }
+    });

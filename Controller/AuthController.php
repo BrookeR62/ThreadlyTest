@@ -4,10 +4,9 @@ session_start();
 
 require_once "../Model/UserModel.php";
 
-$userModel = new UserModel(); // ✅ CREATE THIS ONCE AT TOP
+$userModel = new UserModel();
 
 
-// ================= LOGIN =================
 if (isset($_POST['action']) && $_POST['action'] == "login") {
 
     $username = $_POST['username'];
@@ -32,7 +31,7 @@ if (isset($_POST['action']) && $_POST['action'] == "login") {
 }
 
 
-// ================= REGISTER =================
+
 if (isset($_POST['action']) && $_POST['action'] == "register") {
 
     $email = $_POST['email'];
@@ -47,7 +46,7 @@ if (isset($_POST['action']) && $_POST['action'] == "register") {
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    // check password match
+   
     if ($password != $confirm_password) {
 
         header("Location: ../registration.php?error=password");
@@ -55,7 +54,7 @@ if (isset($_POST['action']) && $_POST['action'] == "register") {
 
     }
 
-    // register user
+ 
     $result = $userModel->register(
         $email,
         $username,
@@ -81,6 +80,15 @@ if (isset($_POST['action']) && $_POST['action'] == "register") {
 
     }
 
+}
+
+
+
+if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+    $_SESSION = [];
+    session_destroy();
+    header("Location: ../index.php");
+    exit();
 }
 
 ?>
