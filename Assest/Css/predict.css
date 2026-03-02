@@ -1,69 +1,142 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Fredokaone 'Fredoka', sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-     margin: 0;
-    height: 100vh;
+    background: linear-gradient(135deg, #f9efe3, #f7d7b5);
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 20px;
+}
+
+
+.header {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 0;
-}
-.ellipse {
-    position: absolute;
-    height: 327px;
-    width: 500px;
-    background-color: #FFA02A;
-    filter: blur(400px);
-    border-radius: 50%;
-    z-index: -1; 
-    pointer-events: none; 
+    margin-bottom: 40px;
 }
 
-
-.leftellipse {
-    top: 10%;
-    left: -250px; 
-}
-
-
-.rightellipse {
-    bottom: 10%;
-    right: -250px;
-}
-
-
-
-.nav_spacing{
-	 display: flex;
-    justify-content: space-between (926px);
-    align-items: center;
-}
-
-.backbutton {
-    align-items: center;
-	box-sizing: border-box;
-	text-align: center;
-	font-size: 25px;
-	background: #ffffff;
-	border-radius: 20px;
-	border-color: black;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.threadlylogin {
-	font-size: 28px;
+.logo {
+    color: #8b5e3c;
     font-weight: 700;
-    color: #7a4a2e;
-    font-family: Fredoka One;
-	position: right;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.back-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #8b5e3c;
+    background: transparent;
+    color: #8b5e3c;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #8b5e3c;
+    color: #fff;
 }
 
 
+.form-grid {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
+
+.form-group label {
+    font-size: 14px;
+    color: #5a4633;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #f2d4ad;
+    color: #5a4633;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    background: #eac096;
+    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.1);
+}
+
+
+.estimate {
+    display: flex;
+    align-items: flex-end;
+}
+
+.estimate-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #ffb55a;
+    color: #5a4633;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.estimate-btn:hover {
+    background: #ff9e30;
+    transform: translateY(-2px);
+}
+
+
+.price {
+    grid-column: span 2;
+}
+
+.price-output {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid #c9a47e;
+    background: #fff5e6; 
+    color: #8b5e3c;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .price {
+        grid-column: span 1;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+}

@@ -35,22 +35,6 @@ include("includes/header.php");
         <p class="brand">Brand New · Size US M 10.5 +</p>
     </div>
 </div>      
-<script>
-    const toggle = document.getElementById('profileToggle');
-    const dropdown = document.getElementById('profileDropdown');
-
-    toggle.addEventListener('click', () => {
-        dropdown.style.display =
-            dropdown.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.style.display = 'none';
-        }
-    });
-</script>
-
 <script src="Assest/Js/homepage.js"></script>
 
 <?php include("includes/footer.php"); ?>

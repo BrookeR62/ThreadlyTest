@@ -30,7 +30,7 @@ if (!isset($page_title)) {
             <a href="community.php" class="n">Community</a>
             <a href="contact.php" class="n">Contact</a>         
         </div>
-     <a href="predict.php" class="button_pridect">Predict Price</a>
+     <a href="predictUI.php" class="button_pridect">Predict Price</a>
        <div class="nav-icons">   
             <a href="messages.php" title="Messages">
                 <i class="fa-solid fa-envelope"></i>

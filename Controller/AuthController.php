@@ -6,6 +6,8 @@ require_once "../Model/UserModel.php";
 
 $userModel = new UserModel();
 
+//For Login
+
 
 if (isset($_POST['action']) && $_POST['action'] == "login") {
 
@@ -30,7 +32,7 @@ if (isset($_POST['action']) && $_POST['action'] == "login") {
     }
 }
 
-
+//For Registration
 
 if (isset($_POST['action']) && $_POST['action'] == "register") {
 
@@ -83,12 +85,12 @@ if (isset($_POST['action']) && $_POST['action'] == "register") {
 }
 
 
+//For Logout
 
-if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+
+if (isset($_POST['action']) && $_POST['action'] === 'logout') {
     $_SESSION = [];
     session_destroy();
     header("Location: ../index.php");
     exit();
 }
-
-?>

@@ -4,12 +4,6 @@
     </div>
 <?php endif; ?>
 
-<?php if (isset($_GET['error']) && $_GET['error'] == "wrong"): ?>
-    <div class="error-message">
-        Wrong username or password.
-    </div>
-<?php endif; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +15,11 @@
     <link rel="stylesheet" href="Assest/Css/login.css">
 </head>
 <body>
+    <?php if (isset($_GET['error']) && $_GET['error'] === 'wrong'): ?>
+        <div class="error-message">
+            Invalid username or password.
+        </div>
+    <?php endif; ?>
     <div class="bg-shape"></div>
     <div class="container">
         <div class="left">
@@ -83,12 +82,6 @@
             </div>
         </div>
     </div>
-    <script>
-    setTimeout(() => {
-    const msg = document.querySelector(".success-message");
-    if (msg) msg.style.display = "none";
-    }, 100);
-</script>
 <script src="Assest/Js/login.js"></script>
 </body>
 </html>
