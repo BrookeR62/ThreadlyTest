@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Threadly Prediction</title>
+    <title>Threadly Price Prediction</title>
     <link rel="stylesheet" href="Assest/Css/predict.css">
 </head>
 <body>
@@ -25,72 +25,72 @@ if (!isset($_SESSION['user_id'])) {
     <div class="form-grid">
         
         <div class="form-group">
-            <label>Brand</label>
+            <label for="brand">Brand</label>
             <select id="brand">
-                <option>Select brand</option>
-                <option>New Balance</option>
-                <option>Under Armour</option>
-                <option>Nike</option>
-                <option>Adidas</option>
-                <option>Reebok</option>
-                <option>Puma</option>
+                <option value="">Select brand</option>
+                <option value="New Balance">New Balance</option>
+                <option value="Under Armour">Under Armour</option>
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="Reebok">Reebok</option>
+                <option value="Puma">Puma</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>Category</label>
+            <label for="category">Category</label>
             <select id="category">
-                <option>Select category</option>
-                <option>Shoes</option>
-                <option>Dress</option>
-                <option>Jacket</option>
-                <option>Sweater</option>
-                <option>Jeans</option>
-                <option>T-Shirt</option>
+                <option value="">Select category</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Dress">Dress</option>
+                <option value="Jacket">Jacket</option>
+                <option value="Sweater">Sweater</option>
+                <option value="Jeans">Jeans</option>
+                <option value="T-Shirt">T-Shirt</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>Material</label>
+            <label for="material">Material</label>
             <select id="material">
-                <option>Select material</option>
-                <option>Cotton</option>
-                <option>Denim</option>
-                <option>Nylon</option>
-                <option>Silk</option>
-                <option>Wool</option>
-                <option>Polyester</option>
+                <option value="">Select material</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Denim">Denim</option>
+                <option value="Nylon">Nylon</option>
+                <option value="Silk">Silk</option>
+                <option value="Wool">Wool</option>
+                <option value="Polyester">Polyester</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>Size</label>
+            <label for="size">Size</label>
             <select id="size">
-                <option>Select size</option>
-                <option>XS</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-                <option>XXL</option>
+                <option value="">Select size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>Color</label>
+            <label for="color">Color</label>
             <select id="color">
-                <option>Select color</option>
-                <option>Black</option>
-                <option>White</option>
-                <option>Green</option>
-                <option>Yellow</option>
-                <option>Blue</option>
-                <option>Red</option>
+                <option value="">Select color</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
             </select>
         </div>
 
         <div class="form-group estimate">
-            <button class="estimate-btn" id="predictBtn">Estimated price</button>
+            <button class="estimate-btn" id="predictBtn">Estimate Price</button>
         </div>
 
         <div class="form-group price">
@@ -98,6 +98,7 @@ if (!isset($_SESSION['user_id'])) {
             <div class="price-output" id="price">$0.00</div>
         </div>
     </div>
-    <script src="Assest/Js/predict.js"></script>
+
+    <script src="Assest/Js/pred.js"></script>
 </body>
 </html>

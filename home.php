@@ -6,35 +6,59 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-
 $page_title = "Home - Threadly";
 include("includes/header.php");
 ?>
 
-<div class="center_container">
-    <div id="menu" class="menu">
-        <img src="Assest/Image/leftarrow.png" id="arrowleft" class="arrowleft">
-        <img src="Assest/Image/shoes.png" id="productImage" alt="Shoes" class="image">
-        <img src="Assest/Image/rightarrow.png" id="arrowright" class="arrowright">
-        <div class="shadow"></div>
-        <h2 class="type" id="type">Shoes</h2>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Find the Best Fashion Deals</h1>
+        <p>Discover trending shoes, clothes, and fashion items from the community.</p>
+        <a href="predictUI.php" class="hero-btn">Predict Item Price</a>
     </div>
-    
-    <div class="box">
-        <div class="info">
-            <p class="name" id="name1">Adidas men Lite Racer Adapt 7.0</p>
-            <p class="name" id="name2">Shoes Opens in a new window</p>
-            <p class="name" id="name3">or tab</p>
-        </div>  
+</section>
 
-        <div class="pricebox">
-            <p><strong class="price" id="price">$22.00</strong> or Best Offer</p>
-            <p><strong class="shipping" id="shipping">$8.75</strong> shipping</p>
+<section class="products">
+
+    <h2 class="section-title">Featured Product</h2>
+
+    <div class="product-container">
+
+        <div class="product-slider">
+
+            <img src="Assest/Image/leftarrow.png" id="arrowleft" class="arrowleft">
+
+            <div class="product-image-box">
+                <img src="Assest/Image/shoes.png" id="productImage" alt="Shoes">
+                <div class="shadow"></div>
+                <h3 id="type">Shoes</h3>
+            </div>
+
+            <img src="Assest/Image/rightarrow.png" id="arrowright" class="arrowright">
+
         </div>
 
-        <p class="brand">Brand New · Size US M 10.5 +</p>
+        <div class="product-info">
+
+            <h3 id="name1">Adidas men Lite Racer Adapt 7.0</h3>
+            <p id="name2">Shoes Opens in a new window</p>
+            <p id="name3">or tab</p>
+
+            <div class="pricebox">
+                <p><strong id="price">$22.00</strong> or Best Offer</p>
+                <p><strong id="shipping">$8.75</strong> shipping</p>
+            </div>
+
+            <p class="brand">Brand New · Size US M 10.5 +</p>
+
+            <button class="buy-btn">View Item</button>
+
+        </div>
+
     </div>
-</div>      
+
+</section>
+
 <script src="Assest/Js/homepage.js"></script>
 
 <?php include("includes/footer.php"); ?>

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             productImage: "Assest/Image/jacket.png",
-            name1: "Under Armour Windbreaker  ",
+            name1: "Under Armour Windbreaker",
             name2: "Unisex Waterproof Outdoor",
             name3: "Wear Aesthetics",
             type: "Jacket",
@@ -45,16 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
             type: "Tshirt",
             price: "$12.99",
             shipping: "$3.50"
-        } ,
+        },
         {
             productImage: "Assest/Image/sweater.png",
             name1: "Columbia Puffer Jacket",
             name2: "Warm Winter Layer",
             name3: "Sweater",
+            type: "Sweater",
             price: "$49.99",
             shipping: "$6.99"
         }
-
     ];
 
     let currentIndex = 0;
@@ -63,22 +63,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const arrowRight = document.getElementById("arrowright");
 
     arrowLeft.addEventListener("click", function () {
+
         currentIndex--;
+
         if (currentIndex < 0) {
             currentIndex = product.length - 1;
         }
+
         updateProduct();
+
     });
 
     arrowRight.addEventListener("click", function () {
+
         currentIndex++;
+
         if (currentIndex >= product.length) {
             currentIndex = 0;
         }
+
         updateProduct();
+
     });
 
     function updateProduct() {
+
         let item = product[currentIndex];
 
         document.getElementById("productImage").src = item.productImage;
@@ -88,21 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("type").innerText = item.type;
         document.getElementById("price").innerText = item.price;
         document.getElementById("shipping").innerText = item.shipping;
+
     }
-
-    // Profile dropdown
-    const toggle = document.getElementById('profileToggle');
-    const dropdown = document.getElementById('profileDropdown');
-
-    toggle.addEventListener('click', function () {
-        dropdown.style.display =
-            dropdown.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.addEventListener('click', function (e) {
-        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.style.display = 'none';
-        }
-    });
 
 });

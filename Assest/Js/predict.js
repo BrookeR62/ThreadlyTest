@@ -1,23 +1,35 @@
-document.getElementById("predictBtn").addEventListener("click", function () {
-    const formData = new FormData();
+document.getElementById('predictBtn').addEventListener('click', async () => {
+    const brand    = document.getElementById('brand').value;
+    const category = document.getElementById('category').value;
+    const material = document.getElementById('material').value;
+    const size     = document.getElementById('size').value;
+    const color    = document.getElementById('color').value;
 
-    formData.append("brand", document.getElementById("brand").value);
-    formData.append("category", document.getElementById("category").value);
-    formData.append("material", document.getElementById("material").value);
-    formData.append("size", document.getElementById("size").value);
-    formData.append("color", document.getElementById("color").value);
+    if (!brand || !category || !material || !size || !color ||
+        brand === 'Select brand' || category === 'Select category' /* ... */) {
+        alert('Please fill in all fields');
+        return;
+    }
 
-    fetch("Controller/predict.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data); // DEBUG LINE
+    const data = { brand, category, color, size, material };
 
-        // THIS must match PHP JSON key
-        document.getElementById("price").innerText =
-            "Estimated Price: ₱" + data.price;
-    })
-    .catch(error => console.error(error));
+    try {
+        const response = await fetch('predict_price.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            document.getElementById('price').textContent = `$${result.price.toFixed(2)}`;
+        } else {
+            alert('Prediction failed: ' + (result.error || 'Unknown error'));
+            console.error(result);
+        }
+    } catch (err) {
+        alert('Network/server error');
+        console.error(err);
+    }
 });
