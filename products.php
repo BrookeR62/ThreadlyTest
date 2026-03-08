@@ -28,6 +28,9 @@ include("includes/header.php");
         <button class="category-btn" data-category="Jacket">Jackets</button>
         <button class="category-btn" data-category="Dress">Dresses</button>
         <button class="category-btn" data-category="Sweater">Sweaters</button>
+        <button class="category-btn" data-category="Watch">Watches</button>
+        <button class="category-btn" data-category="Bag">Bags</button>
+        <button class="category-btn" data-category="Gaming-Setup">Gaming Desktop </button>
     </div>
 
     
